@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Solve the Case</title>
+
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="lg:ml-20 lg:mr-20 lg:py-20 ml-10 mr-10 py-10">
+      <div
+        class="bg-gray-600 rounded-md p-5 mb-20"
+        style="
+          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        "
+      >
+        <h1
+          class="text-center text-5xl font-bold text-gray-100 p-5 bg-gray-500"
+          style="
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+              0 17px 50px 0 rgba(0, 0, 0, 0.19);
+          "
+        >
+          RANSOM NOTES
+        </h1>
+      </div>
+      <div>
+        <div class="transformText">Enter the text in the Magazine here</div>
+        <textarea
+          id="magazine"
+          class="ta1 bg-gray-200 focus:bg-white sm:w-full w-full"
+          rows="10"
+          cols="100"
+        ></textarea>
+      </div>
+      <div class="inputwords">
+        <div class="transformText">
+          Enter the words left by the Kidnapper here
+        </div>
+        <textarea
+          id="words"
+          class="ta2 bg-gray-200 focus:bg-white sm:w-full w-full"
+          rows="5"
+          cols="75"
+        ></textarea
+        ><br /><br />
+        <button class="button button1" type="button" onclick="containsValue()">
+          Check
+        </button>
+      </div>
+      <div id="disp1" class="result1">
+        <div role="alert">
+          <div class="bg-blue-500 text-white font-bold rounded-t px-4 py-2">
+            <p id="demopos1"></p>
+          </div>
+          <div
+            class="border border-t-0 border-blue-400 rounded-b bg-blue-100 px-4 py-3 text-blue-700"
+          >
+            <p id="demopos2"></p>
+          </div>
+        </div>
+      </div>
+      <div id="disp2" class="result2">
+        <div role="alert">
+          <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
+            <p id="demoneg1"></p>
+          </div>
+          <div
+            class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700"
+          >
+            <p id="demoneg2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
