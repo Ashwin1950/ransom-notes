@@ -46,6 +46,7 @@
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 5px;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .button1:hover {
@@ -67,4 +68,8 @@ body {
 
 .result2 {
   display: none;
+}
+
+h1{
+    text-shadow: 2px 2px 4px #000000;
 }
