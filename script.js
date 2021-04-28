@@ -41,6 +41,10 @@ function callFunction() {
   takeIn();
   notAvail.splice(0, notAvail.length);
   var str = document.getElementById("words").value;
+  str = str.replace(
+    /[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-\\\/\,\?\n]/g,
+    " "
+  );
   str = str.replace(/\n/g, " ");
   str = str.replace("  ", " ");
   //   console.log(str);
