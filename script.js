@@ -30,7 +30,10 @@ function splitWords(str) {
 function takeIn() {
   var str = document.getElementById("magazine").value;
   //replacing all the special characters with space
-  str = str.replace(/[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-\\\/\,\?\n]/g," "); 
+  str = str.replace(
+    /[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-\\\/\,\?\n]/g,
+    " "
+  );
   splitMagazine(str);
 }
 
@@ -44,7 +47,7 @@ function callFunction() {
   splitWords(str);
   var i;
   for (i = 0; i < word.length; i++) {
-    compareBoth(word[i]);  
+    compareBoth(word[i]);
   }
 }
 
@@ -53,13 +56,16 @@ function compareBoth(wrd) {
     flag = 0;
   //comparing each word left by kidnapper with that in the magazine
   for (i = 0; i < magazineWords.length; i++) {
-    if (magazineWords[i].localeCompare(wrd) == 0) { 
-      flag = 1;
-      break;
+    if (magazineWords[i] !== null) {
+      if (magazineWords[i].localeCompare(wrd) == 0) {
+        flag = 1;
+        magazineWords[i] = null;
+        break;
+      }
     }
   }
   if (flag != 1) {
-    notAvail.push(wrd);  //pushing the unexisting words into notAvail
+    notAvail.push(wrd); //pushing the unexisting words into notAvail
   }
   disp1.style.display = "none";
   disp2.style.display = "none";
@@ -75,10 +81,16 @@ function compareBoth(wrd) {
     disp2.style.display = "block";
     if (notAvail.length == 1) {
       document.getElementById("demoneg1").innerHTML =
-        (notAvail.length)+' word "' + notAvail + '" does not exist in this Magazine.';
+        notAvail.length +
+        ' word "' +
+        notAvail +
+        '" does not exist in this Magazine.';
     } else {
       document.getElementById("demoneg1").innerHTML =
-        (notAvail.length)+' words "' + notAvail + '" do not exist in this Magazine.';
+        notAvail.length +
+        ' words "' +
+        notAvail +
+        '" do not exist in this Magazine.';
     }
     document.getElementById("demoneg2").innerHTML =
       "No. The Kidnapper has not taken the words from this Magazine.";
