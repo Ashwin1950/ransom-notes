@@ -30,7 +30,7 @@ function splitWords(str) {
 function takeIn() {
   var str = document.getElementById("magazine").value;
   //replacing all the special characters with space
-  str = str.replace(/[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-\\\/\,\?]/g," "); 
+  str = str.replace(/[\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-\\\/\,\?\n]/g," "); 
   splitMagazine(str);
 }
 
@@ -38,8 +38,8 @@ function callFunction() {
   takeIn();
   notAvail.splice(0, notAvail.length);
   var str = document.getElementById("words").value;
+  str = str.replace(/\n/g, " ");
   str = str.replace("  ", " ");
-  str = str.replace("   ", " ");
   //   console.log(str);
   splitWords(str);
   var i;
