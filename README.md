@@ -22,7 +22,7 @@ comparing to the second input and also list out the missing words.
 * TailwindCSS v2.0
 
 ### Hosted Website Link: ###
-      [link to Google!](https://ashwin1950.github.io/ransom-notes/)
+      https://ashwin1950.github.io/ransom-notes/ - automatic!
 
 					 	                                         Done by
 				                                                  Ashwin Muthu Kumar S
